@@ -480,15 +480,23 @@ $ipTerm = array(
         <div class="col"></div>
     </div>
 
-<div class="container">
-<div class="input-group mb-3">
-  <button class="btn btn-outline-secondary" type="button" id="button-addon1">Buscar</button>
-  <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-</div>
-    <div class="row">        
+    <div class="container">
+        <div class="input-group mb-3 search-container">
+            <button class="btn btn-outline-secondary" type="button" id="btn-buscar">Buscar</button>
+            <input type="text" class="form-control" placeholder="Buscar..." id="searchInput">
+        </div>
+    <ul id="resultList">
+      <?php 
+         foreach($ipTermterminals as $datos){
+         ?>
+         <li><?php echo $datos['sucursal']?></li>
+         <?php }
+      ?>
+    </ul>
+        <div class="row">
             <!--desde aqui -->
             <?php foreach ($ipTermterminals as $datos) {
-                ?>                
+                ?>
                 <div class="card mb-3 p-2 shadow-lg m-2 rounded" style="width: 16rem; background-color:#F2F2F2;">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -500,41 +508,52 @@ $ipTerm = array(
                             <?php
                             if ((new CheckDevice())->ping($datos['ip'])) {
                                 ?>
-                                <span class="badge bg-primary">Activo</span>
+                                <span class="badge" style="background-color:gray;">Activo</span>
                                 <?php
                             } else {
                                 echo '<span class="badge bg-danger">Inactivo</span>';
                             }
-                            ?>                                                    
+                            ?>
                             <br>
                             Caja 2:
                             <?php echo $datos['ip2'] ?><br>
                             <?php
                             if ((new CheckDevice())->ping($datos['ip2'])) {
                                 ?>
-                                <span class="badge bg-primary">Activo</span>
+                                <span class="badge" style="background-color:gray;">Activo</span>
                                 <?php
                             } else {
                                 echo '<span class="badge bg-danger">Inactivo</span>';
                             }
                             ?>
-                            <br>                        
+                            <br>
                             <?php if ($datos['ip3'] == '') {
                                 echo 'No existe caja 3';
                             } else {
-                                
+
                                 if ((new CheckDevice())->ping($datos['ip3'])) {
                                     ?>
-                                    Caja 3: <?php echo $datos['ip3'];?> <span class="badge bg-primary">Activo</span>
+                                    Caja 3:
+                                    <?php echo $datos['ip3']; ?> <span class="badge" style="background-color:gray;">Activo</span>
                                     <?php
                                 } else {
-                                    echo "Caja 3: ", $datos['ip3'],'<span class="badge bg-danger">Inactivo</span>';
-                                }                            
-                                
+                                    echo "Caja 3: ", $datos['ip3'], '<span class="badge bg-danger">Inactivo</span>';
+                                }
+
                             } ?>
                         </p>
 
-                        <a href="#" class="btn btn-primary">Refrescar</a>
+                        <button type="button" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z">
+                                </path>
+                                <path
+                                    d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466">
+                                </path>
+                            </svg>
+                            Recargar
+                        </button>
                     </div>
                 </div>
                 <?php
@@ -543,7 +562,7 @@ $ipTerm = array(
             <!--hasta aqui-->
 
             <!--tabs-->
-            <div class="tab-content" id="pills-tabContent">                
+            <div class="tab-content" id="pills-tabContent">
                 <!--Red en sucursal-->
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
                     tabindex="0">
@@ -680,14 +699,36 @@ $ipTerm = array(
                 </div>
                 <!--Ip de computadoras-->
                 <!--Tabs-->
-            </div>        
+            </div>
+        </div>
     </div>
-                    </div>
 </body>
 <!--Js-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var input = document.getElementById("searchInput");
+    var list = document.getElementById("resultList");
+    var items = list.getElementsByTagName("li");
+    input.addEventListener("input", function () {
+        var searchTerm = input.value.toLowerCase();
+        for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            var text = item.textContent.toLowerCase();
+            if (text.includes(searchTerm)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        }
+    });
+});
+</script>
 
 </html>
 
