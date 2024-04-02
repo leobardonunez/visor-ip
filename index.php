@@ -202,8 +202,8 @@ $ipTermterminals = array(
     ),
     6 => array(
         'sucursal' => 'Los Angeles',
-        'ip' => '192.168.63.107',
-        'ip2' => '192.168.17.76'
+        'ip' => '192.168.63.4',
+        'ip2' => '192.168.17.5'
     ),
     7 => array(
         'sucursal' => 'Jardines',
@@ -456,8 +456,8 @@ $ipTerm = array(
             <h1>Visor de estado de red</h1>
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                    <button class="nav-link active" id="pills-terminal-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-terminal" type="button" role="tab" aria-controls="pills-terminal"
                         aria-selected="true">Terminales</button>
                 </li>
                 <li class="nav-item" role="presentation">
@@ -475,6 +475,11 @@ $ipTerm = array(
                         data-bs-target="#pills-computadoras" type="button" role="tab" aria-controls="pills-computadoras"
                         aria-selected="false">Computadoras</button>
                 </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-impresoras-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-impresoras" type="button" role="tab" aria-controls="pills-impresoras"
+                        aria-selected="false">Impresoras</button>
+                </li>
             </ul>
         </div>
         <div class="col"></div>
@@ -483,221 +488,53 @@ $ipTerm = array(
     <div class="container">
         <div class="input-group mb-3 search-container">
             <button class="btn btn-outline-secondary" type="button" id="btn-buscar">Buscar</button>
-            <input type="text" class="form-control" placeholder="Buscar..." id="searchInput">
+            <input type="text" class="form-control" placeholder="Buscar..." id="searchInput"
+                style="display: inline-block; margin-right: 10px;">
         </div>
-    <ul id="resultList">
-      <?php 
-         foreach($ipTermterminals as $datos){
-         ?>
-         <li><?php echo $datos['sucursal']?></li>
-         <?php }
-      ?>
-    </ul>
+
+
         <div class="row">
-            <!--desde aqui -->
-            <?php foreach ($ipTermterminals as $datos) {
-                ?>
-                <div class="card mb-3 p-2 shadow-lg m-2 rounded" style="width: 16rem; background-color:#F2F2F2;">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <?php echo $datos['sucursal'] ?>
-                        </h5>
-                        <p class="card-text">
-                            Caja 1:
-                            <?php echo $datos['ip'] ?>
-                            <?php
-                            if ((new CheckDevice())->ping($datos['ip'])) {
-                                ?>
-                                <span class="badge" style="background-color:gray;">Activo</span>
-                                <?php
-                            } else {
-                                echo '<span class="badge bg-danger">Inactivo</span>';
-                            }
-                            ?>
-                            <br>
-                            Caja 2:
-                            <?php echo $datos['ip2'] ?><br>
-                            <?php
-                            if ((new CheckDevice())->ping($datos['ip2'])) {
-                                ?>
-                                <span class="badge" style="background-color:gray;">Activo</span>
-                                <?php
-                            } else {
-                                echo '<span class="badge bg-danger">Inactivo</span>';
-                            }
-                            ?>
-                            <br>
-                            <?php if ($datos['ip3'] == '') {
-                                echo 'No existe caja 3';
-                            } else {
-
-                                if ((new CheckDevice())->ping($datos['ip3'])) {
-                                    ?>
-                                    Caja 3:
-                                    <?php echo $datos['ip3']; ?> <span class="badge" style="background-color:gray;">Activo</span>
-                                    <?php
-                                } else {
-                                    echo "Caja 3: ", $datos['ip3'], '<span class="badge bg-danger">Inactivo</span>';
-                                }
-
-                            } ?>
-                        </p>
-
-                        <button type="button" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z">
-                                </path>
-                                <path
-                                    d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466">
-                                </path>
-                            </svg>
-                            Recargar
-                        </button>
-                    </div>
-                </div>
-                <?php
-            }
-            ?>
-            <!--hasta aqui-->
-
             <!--tabs-->
             <div class="tab-content" id="pills-tabContent">
+
+
+                <!-- Terminal-->
+                <div class="tab-pane active" id="pills-terminal" role="tabpanel" aria-labelledby="pills-terminal-tab"
+                    tabindex="0">
+                    <?php require ('components/terminal.php'); ?>
+                </div>
+                <!-- Terminal-->
+
+
                 <!--Red en sucursal-->
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
                     tabindex="0">
-                    <table class="table table-striped table-bordered table-sm" id="tabla" style="width:40%">
-                        <tr align="center">
-                            <th>Sucursal</th>
-                            <th>Ip</th>
-                            <th>Estado</th>
-                        </tr>
-
-                        <?php
-                        foreach ($ipTerm as $datos) {
-                            ?>
-                            <tr align="center">
-                                <td>
-                                    <?php echo $datos['sucursal'] ?>
-                                </td>
-                                <td>
-                                    <?php echo $datos['ip'] ?>
-                                </td>
-                                <?php
-                                if ((new CheckDevice())->ping($datos['ip'])) {
-                                    ?>
-                                    <td>
-                                        Activo
-                                    </td>
-
-                                    <?php
-
-                                } else {
-
-
-                                    $fecha = date("Y-m-d H:i:s");
-
-                                    $texto = 'Fecha y hora: ' . $fecha . ' IP: ' . $datos['ip'] . ' Sucursal: ' . ' ' . $datos['sucursal'];
-
-                                    $archivo = fopen('errores.txt', 'a');
-
-                                    fwrite($archivo, $texto . PHP_EOL);
-
-
-                                    fclose($archivo);
-
-
-
-                                    ?>
-                                    <title>Fallo en red
-                                    </title>
-                                    <td style="background-color:red; color:white;">
-                                        Inactivo
-                                    </td>
-                                    <?php
-
-                                }
-                                ?>
-                                </td>
-
-                            </tr>
-                            <?php
-                        }
-                        ?>
-                    </table>
+                    <?php require ('components/red.php'); ?>
                 </div>
                 <!--Red en sucursal-->
+
+
+
                 <!--Checadores-->
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
                     tabindex="0">
-                    <table class="table table-striped table-bordered table-sm" id="tabla" style="width:40%">
-                        <tr align="center">
-                            <th>Sucursal</th>
-                            <th>Ip</th>
-                            <th>Estado</th>
-                        </tr>
-
-                        <?php
-                        foreach ($ipChecadores as $datos) {
-                            ?>
-                            <tr align="center">
-                                <td>
-                                    <?php echo $datos['sucursal'] ?>
-                                </td>
-                                <td>
-                                    <?php echo $datos['ip'] ?>
-                                </td>
-                                <?php
-                                if ((new CheckDevice())->ping($datos['ip'])) {
-                                    ?>
-                                    <td>
-                                        Activo
-                                    </td>
-
-                                    <?php
-
-                                } else {
-
-
-                                    $fecha = date("Y-m-d H:i:s");
-
-                                    $texto = 'Fecha y hora: ' . $fecha . ' IP: ' . $datos['ip'] . ' Sucursal: ' . ' ' . $datos['sucursal'];
-
-                                    $archivo = fopen('errores.txt', 'a');
-
-                                    fwrite($archivo, $texto . PHP_EOL);
-
-
-                                    fclose($archivo);
-
-
-
-                                    ?>
-                                    <title>Fallo en Checador
-                                    </title>
-                                    <td style="background-color:red; color:white;">
-                                        Inactivo
-                                    </td>
-                                    <?php
-
-                                }
-                                ?>
-                                </td>
-
-                            </tr>
-                            <?php
-                        }
-                        ?>
-                    </table>
+                    <?php require ('components/checador.php'); ?>
                 </div>
                 <!--Checadores-->
+
+
+
                 <!--Ip de computadoras-->
                 <div class="tab-pane fade" id="pills-computadoras" role="tabpanel"
                     aria-labelledby="pills-computadoras-tab" tabindex="0">
-                    IP Computadoras
-                    lore
+                    <?php require ('components/computadora.php'); ?>
                 </div>
                 <!--Ip de computadoras-->
+
+
+
+
+
                 <!--Tabs-->
             </div>
         </div>
@@ -711,23 +548,23 @@ $ipTerm = array(
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    var input = document.getElementById("searchInput");
-    var list = document.getElementById("resultList");
-    var items = list.getElementsByTagName("li");
-    input.addEventListener("input", function () {
-        var searchTerm = input.value.toLowerCase();
-        for (var i = 0; i < items.length; i++) {
-            var item = items[i];
-            var text = item.textContent.toLowerCase();
-            if (text.includes(searchTerm)) {
-                item.style.display = "block";
-            } else {
-                item.style.display = "none";
+    document.addEventListener("DOMContentLoaded", function () {
+        var input = document.getElementById("searchInput");
+        var list = document.getElementById("resultList");
+        var items = list.getElementsByTagName("li");
+        input.addEventListener("input", function () {
+            var searchTerm = input.value.toLowerCase();
+            for (var i = 0; i < items.length; i++) {
+                var item = items[i];
+                var text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
             }
-        }
+        });
     });
-});
 </script>
 
 </html>
