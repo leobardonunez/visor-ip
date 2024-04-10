@@ -1,149 +1,5 @@
 <?php
 error_reporting(0);
-class CheckChecadores
-{
-    public function myOS()
-    {
-        if (strtoupper(substr(PHP_OS, 0, 3)) === (chr(87) . chr(73) . chr(78)))
-            return false;
-    }
-
-    public function ping3($ip_addr3)
-    {
-        if ($this->myOS()) {
-            if (!exec("ping -n 1 -w 1 " . $ip_addr3 . " 2>NUL > NUL && (echo 0) || (echo 1"))
-                return true;
-        } else {
-            if (!exec("ping -q -c1 " . $ip_addr3 . " >/dev/null 2>&1 ; echo $?"))
-                return true;
-        }
-        return false;
-    }
-}
-
-$ipChecadores = array(
-
-    0 => array(
-        'sucursal' => 'Jiquilpan',
-        'ip' => '192.168.11.50',
-
-    ),
-
-    1 => array(
-        'sucursal' => 'Zacatecas',
-        'ip' => '192.168.12.201',
-
-    ),
-    2 => array(
-        'sucursal' => 'Serdan',
-        'ip' => '192.168.65.111',
-
-    ),
-
-    3 => array(
-        'sucursal' => 'Degollado',
-        'ip' => '192.168.14.201',
-
-    ),
-
-    4 => array(
-        'sucursal' => 'Rio Fuerte',
-        'ip' => '192.168.116.150',
-
-    ),
-    5 => array(
-        'sucursal' => 'Toledo',
-        'ip' => '192.168.16.50',
-
-    ),
-
-    6 => array(
-        'sucursal' => 'Los Angeles',
-        'ip' => '192.168.63.201',
-
-    ),
-    7 => array(
-        'sucursal' => 'Jardines',
-        'ip' => '192.168.18.201',
-
-    ),
-
-    8 => array(
-        'sucursal' => 'Mañanitas',
-        'ip' => '192.168.19.50',
-
-    ),
-
-    9 => array(
-        'sucursal' => 'Ahome',
-        'ip' => '192.168.20.201',
-
-    ),
-
-    10 => array(
-        'sucursal' => 'San Miguel',
-        'ip' => '192.168.21.201',
-
-    ),
-
-    11 => array(
-        'sucursal' => 'Rosales',
-        'ip' => '192.168.60.50',
-
-    ),
-    12 => array(
-        'sucursal' => 'Higuera ',
-        'ip' => '192.168.23.201',
-
-    ),
-    13 => array(
-        'sucursal' => 'Pedro Anaya',
-        'ip' => '192.168.51.50',
-
-    ),
-
-    14 => array(
-        'sucursal' => 'Alamos',
-        'ip' => '192.168.25.127',
-
-    ),
-
-    15 => array(
-        'sucursal' => 'Topolobampo',
-        'ip' => '192.168.26.83',
-
-    ),
-
-    16 => array(
-        'sucursal' => 'Mochicahui',
-        'ip' => '192.168.67.210',
-
-    ),
-    17 => array(
-        'sucursal' => 'El Carrizo',
-        'ip' => '192.168.30.50',
-
-    ),
-
-    18 => array(
-        'sucursal' => 'Laureles',
-        'ip' => '192.168.29.181',
-
-    ),
-
-    19 => array(
-        'sucursal' => 'Ejido Mexico',
-        'ip' => '192.168.31.200',
-
-    ),
-
-    20 => array(
-        'sucursal' => 'Constancia',
-        'ip' => '192.168.32.50',
-
-    )
-
-);
 class CheckTerminals
 {
     public function myOS()
@@ -207,6 +63,7 @@ $ipTermterminals = array(
     ),
     7 => array(
         'sucursal' => 'Jardines',
+        'ip' => '192.168.18.5',
         'ip2' => '192.168.18.4'
     ),
     8 => array(
@@ -269,7 +126,7 @@ $ipTermterminals = array(
     ),
     19 => array(
         'sucursal' => 'Ejido Mexico',
-        'ip' => '192.168.31.78',
+        'ip' => '192.168.31.5',
     ),
     20 => array(
         'sucursal' => 'Constancia',
@@ -447,6 +304,7 @@ $ipTerm = array(
     <title>Panel de equipos</title>
 </head>
 <br><br>
+<!--Actualizaciones: añadir link a ip para que se abra ventana de cmd con un ping sostenido a esa ip-->
 
 <body>
     <div class="row">
@@ -524,14 +382,20 @@ $ipTerm = array(
 
 
 
-                <!--Ip de computadoras-->
+                <!--computadoras-->
                 <div class="tab-pane fade" id="pills-computadoras" role="tabpanel"
                     aria-labelledby="pills-computadoras-tab" tabindex="0">
                     <?php require ('components/computadora.php'); ?>
                 </div>
-                <!--Ip de computadoras-->
+                <!--computadoras-->
 
 
+                <!--Impresora-->
+                <div class="tab-pane fade" id="pills-impresoras" role="tabpanel" 
+                aria-labelledby="pills-impresoras-tab" tabindex="0">
+                    <?php require ('components/impresora.php'); ?>
+                </div>
+                <!--Impresora-->                    
 
 
 

@@ -1,61 +1,198 @@
+<?php
+class CheckChecador
+{
+    public function myOS()
+    {
+        if (strtoupper(substr(PHP_OS, 0, 3)) === (chr(87) . chr(73) . chr(78)))
+            return false;
+    }
 
-                    <table class="table table-striped table-bordered table-sm" id="tabla" style="width:40%">
-                        <tr align="center">
-                            <th>Sucursal</th>
-                            <th>Ip</th>
-                            <th>Estado</th>
-                        </tr>
+    public function pingChecador($ip_checador)
+    {
+        if ($this->myOS()) {
+            if (!exec("ping -n 1 -w 1 " . $ip_checador . " 2>NUL > NUL && (echo 0) || (echo 1"))
+                return true;
+        } else {
+            if (!exec("ping -q -c1 " . $ip_checador . " >/dev/null 2>&1 ; echo $?"))
+                return true;
+        }
+        return false;
+    }
+}
 
-                        <?php
-                        foreach ($ipChecadores as $datos) {
+$ipChecador = array(
+
+    0 => array(
+        'sucursal'=> 'Administracion',
+        'ip' => '192.168.1.201',
+    ),
+
+    1 => array(
+        'sucursal'=> 'Mayoreo',
+        'ip' => '192.168.1.185',
+    ),
+
+    2 => array(
+        'sucursal' => 'Jiquilpan',
+        'ip' => '192.168.11.50',
+
+    ),
+
+    3 => array(
+        'sucursal' => 'Zacatecas',
+        'ip' => '192.168.12.201',
+
+    ),
+    4 => array(
+        'sucursal' => 'Serdan',
+        'ip' => '192.168.65.111',
+
+    ),
+
+    5 => array(
+        'sucursal' => 'Degollado',
+        'ip' => '192.168.14.201',
+
+    ),
+
+    6 => array(
+        'sucursal' => 'Rio Fuerte',
+        'ip' => '192.168.116.150',
+
+    ),
+    7 => array(
+        'sucursal' => 'Toledo',
+        'ip' => '192.168.16.50',
+
+    ),
+
+    8 => array(
+        'sucursal' => 'Los Angeles',
+        'ip' => '192.168.63.201',
+
+    ),
+    9 => array(
+        'sucursal' => 'Jardines',
+        'ip' => '192.168.18.201',
+
+    ),
+
+    10 => array(
+        'sucursal' => 'Mañanitas',
+        'ip' => '192.168.19.50',
+
+    ),
+
+    11 => array(
+        'sucursal' => 'Ahome',
+        'ip' => '192.168.20.201',
+
+    ),
+
+    12 => array(
+        'sucursal' => 'San Miguel',
+        'ip' => '192.168.21.201',
+
+    ),
+
+    13 => array(
+        'sucursal' => 'Rosales',
+        'ip' => '192.168.60.50',
+
+    ),
+    14 => array(
+        'sucursal' => 'Higuera ',
+        'ip' => '192.168.23.201',
+
+    ),
+    15 => array(
+        'sucursal' => 'Pedro Anaya',
+        'ip' => '192.168.51.50',
+
+    ),
+
+    16 => array(
+        'sucursal' => 'Alamos',
+        'ip' => '192.168.25.127',
+
+    ),
+
+    17 => array(
+        'sucursal' => 'Topolobampo',
+        'ip' => '192.168.26.83',
+
+    ),
+
+    18 => array(
+        'sucursal' => 'Mochicahui',
+        'ip' => '192.168.67.210',
+
+    ),
+    19 => array(
+        'sucursal' => 'El Carrizo',
+        'ip' => '192.168.30.50',
+
+    ),
+
+    20 => array(
+        'sucursal' => 'Laureles',
+        'ip' => '192.168.29.181',
+
+    ),
+
+    21 => array(
+        'sucursal' => 'Ejido Mexico',
+        'ip' => '192.168.31.200',
+
+    ),
+
+    22 => array(
+        'sucursal' => 'Constancia',
+        'ip' => '192.168.32.50',
+
+    )
+
+);?>
+
+                    
+
+<ul id="resultList" style="list-style:none;">
+    <?php
+    foreach ($ipChecador as $datos) {
+        ?>
+        <li style="display: inline-block; margin-right: 10px;">
+            <div class="card mb-3 p-2 shadow-lg m-2 rounded" style="width: 16rem; background-color:#F2F2F2;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <?php echo $datos['sucursal'] ?>
+                    </h5>
+                    <p class="card-text">
+                        <?php echo $datos['ip'] ?>
+                        <?php if ((new CheckChecador())->pingChecador($datos['ip'])) {
                             ?>
-                            <tr align="center">
-                                <td>
-                                    <?php echo $datos['sucursal'] ?>
-                                </td>
-                                <td>
-                                    <?php echo $datos['ip'] ?>
-                                </td>
-                                <?php
-                                if ((new CheckDevice())->ping($datos['ip'])) {
-                                    ?>
-                                    <td>
-                                        Activo
-                                    </td>
-
-                                    <?php
-
-                                } else {
-
-
-                                    $fecha = date("Y-m-d H:i:s");
-
-                                    $texto = 'Fecha y hora: ' . $fecha . ' IP: ' . $datos['ip'] . ' Sucursal: ' . ' ' . $datos['sucursal'];
-
-                                    $archivo = fopen('errores.txt', 'a');
-
-                                    fwrite($archivo, $texto . PHP_EOL);
-
-
-                                    fclose($archivo);
-
-
-
-                                    ?>
-                                    <title>Fallo en Checador
-                                    </title>
-                                    <td style="background-color:red; color:white;">
-                                        Inactivo
-                                    </td>
-                                    <?php
-
-                                }
-                                ?>
-                                </td>
-
-                            </tr>
-                            <?php
+                            <span class="badge" style="background-color:gray;">Activo</span>
+                        <?php } else {
+                            echo '<span class="badge bg-danger">Inactivo</span>';
                         }
                         ?>
-                    </table>
+                    </p>
+                    <button type="button" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z">
+                            </path>
+                            <path
+                                d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466">
+                            </path>
+                        </svg>
+                        Recargar
+                    </button>
+                </div>
+            </div>
+        </li>
+    <?php }
+    ?>
+</ul>
+
+                   
           
