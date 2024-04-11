@@ -238,3 +238,10 @@ Fecha y hora: 2024-04-10 17:10:51 IP: 192.168.32.1 Sucursal:  Constancia
 Fecha y hora: 2024-04-10 17:36:29 IP: 192.168.19.1 Sucursal:  Mañanitas
 Fecha y hora: 2024-04-10 17:56:58 IP: 192.168.21.1 Sucursal:  San Miguel
 Fecha y hora: 2024-04-10 18:19:51 IP: 192.168.11.1 Sucursal:  Jiquilpan
+Fecha y hora: 2024-04-10 21:04:16 IP: 192.168.19.1 Sucursal:  Mañanitas
+Fecha y hora: 2024-04-10 22:41:41 IP: 192.168.21.1 Sucursal:  San Miguel
+Fecha y hora: 2024-04-10 23:38:06 IP: 192.168.29.1 Sucursal:  Laureles
+Fecha y hora: 2024-04-10 23:48:21 IP: 192.168.63.1 Sucursal:  Los Angeles
+Fecha y hora: 2024-04-11 00:03:44 IP: 192.168.19.1 Sucursal:  Mañanitas
+Fecha y hora: 2024-04-11 01:49:57 IP: 192.168.19.1 Sucursal:  Mañanitas
+Fecha y hora: 2024-04-11 02:30:54 IP: 192.168.67.1 Sucursal:  Mochicahui

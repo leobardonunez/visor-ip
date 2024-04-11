@@ -68,7 +68,7 @@ $ipTermterminals = array(
     ),
     8 => array(
         'sucursal' => 'Mañanitas',
-        'ip' => '192.168.19.74',
+        'ip' => '192.168.19.4',
         'ip2' => '192.168.19.5'
     ),
     9 => array(
