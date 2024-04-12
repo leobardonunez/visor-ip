@@ -1,141 +1,6 @@
 <?php
 error_reporting(0);
-class CheckTerminals
-{
-    public function myOS()
-    {
-        if (strtoupper(substr(PHP_OS, 0, 3)) === (chr(87) . chr(73) . chr(78)))
-            return false;
-    }
 
-    public function ping2($ip_addr2)
-    {
-        if ($this->myOS()) {
-            if (!exec("ping -n 1 -w 1 " . $ip_addr2 . " 2>NUL > NUL && (echo 0) || (echo 1"))
-                return true;
-        } else {
-            if (!exec("ping -q -c1 " . $ip_addr2 . " >/dev/null 2>&1 ; echo $?"))
-                return true;
-        }
-        return false;
-    }
-}
-
-$ipTermterminals = array(
-    0 => array(
-        'sucursal' => 'Jiquilpan',
-        'ip' => '192.168.11.99',
-        'ip2' => '192.168.11.98'
-    ),
-    1 => array(
-        'sucursal' => 'Zacatecas',
-        'ip' => '192.168.12.6',
-        'ip2' => '192.168.12.5',
-        'ip3' => '192.168.12.4',
-    ),
-
-    2 => array(
-        'sucursal' => 'Serdan',
-        'ip' => '192.168.65.4',
-        'ip2' => '192.168.65.5'
-    ),
-
-    3 => array(
-        'sucursal' => 'Degollado',
-        'ip' => '192.168.14.4',
-        'ip2' => '192.168.14.5',
-        'ip3' => '192.168.14.98'
-    ),
-    4 => array(
-        'sucursal' => 'Rio Fuerte',
-        'ip' => '192.168.116.156',
-        'ip2' => '192.168.116.157'
-    ),
-    5 => array(
-        'sucursal' => 'Toledo',
-        'ip' => '192.168.16.253',
-        'ip2' => '192.168.16.252'
-    ),
-    6 => array(
-        'sucursal' => 'Los Angeles',
-        'ip' => '192.168.63.4',
-        'ip2' => '192.168.17.5'
-    ),
-    7 => array(
-        'sucursal' => 'Jardines',
-        'ip' => '192.168.18.5',
-        'ip2' => '192.168.18.4'
-    ),
-    8 => array(
-        'sucursal' => 'Mañanitas',
-        'ip' => '192.168.19.4',
-        'ip2' => '192.168.19.5'
-    ),
-    9 => array(
-        'sucursal' => 'Ahome',
-        'ip' => '192.168.20.69',
-        'ip2' => '192.168.20.100',
-        'ip3' => '192.168.20.87'
-    ),
-    10 => array(
-        'sucursal' => 'San Miguel',
-        'ip' => '192.168.21.68',
-        'ip2' => '192.168.21.71'
-    ),
-    11 => array(
-        'sucursal' => 'Rosales',
-        'ip' => '192.168.22.59',
-        'ip2' => '192.168.22.76'
-    ),
-    12 => array(
-        'sucursal' => 'Higuera de Zaragoza',
-        'ip' => '192.168.23.85',
-        'ip2' => '192.168.23.84',
-        'ip3' => '192.168.23.83'
-    ),
-    13 => array(
-        'sucursal' => 'Pedro Anaya',
-        'ip' => '192.168.51.77',
-        'ip2' => '192.168.51.70'
-    ),
-    14 => array(
-        'sucursal' => 'Alamos',
-        'ip' => '192.168.25.4',
-        'ip2' => '192.168.75.5'
-    ),
-    15 => array(
-        'sucursal' => 'Topolobampo',
-        'ip' => '192.168.26.66',
-        'ip2' => '192.168.26.85'
-    ),
-    16 => array(
-        'sucursal' => 'Mochicahui',
-        'ip' => '192.168.27.5',
-        'ip2' => '192.168.27.4'
-    ),
-    17 => array(
-        'sucursal' => 'El Carrizo',
-        'ip' => '192.168.30.158',
-        'ip2' => '192.168.30.157 ',
-        'ip3' => '192.168.30.156'
-    ),
-    18 => array(
-        'sucursal' => 'Laureles',
-        'ip' => '192.168.29.5',
-        'ip2' => '192.168.29.4'
-    ),
-    19 => array(
-        'sucursal' => 'Ejido Mexico',
-        'ip' => '192.168.31.5',
-    ),
-    20 => array(
-        'sucursal' => 'Constancia',
-        'ip' => '192.168.32.4',
-        'ip2' => '192.168.32.5',
-        'ip3' => '192.168.32.6'
-    )
-
-);
 class CheckDevice
 {
 
@@ -302,10 +167,12 @@ $ipTerm = array(
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Panel de equipos</title>
+    <!--Navbar-->
+    <?php require ('components/navbar.php'); ?>
+    <!--Navbar-->
 </head>
 <br><br>
 <!--Actualizaciones: añadir link a ip para que se abra ventana de cmd con un ping sostenido a esa ip-->
-
 <body>
     <div class="row">
         <div class="col"></div>
@@ -344,9 +211,8 @@ $ipTerm = array(
     </div>
 
     <div class="container">
-        <div class="input-group mb-3 search-container">
-            <button class="btn btn-outline-secondary" type="button" id="btn-buscar">Buscar</button>
-            <input type="text" class="form-control" placeholder="Buscar..." id="searchInput"
+        <div class="input-group mb-3 search-container">            
+            <input type="text" class="form-control shadow-lg" placeholder="Buscar..." id="searchInput"
                 style="display: inline-block; margin-right: 10px;">
         </div>
 
@@ -359,7 +225,7 @@ $ipTerm = array(
                 <!-- Terminal-->
                 <div class="tab-pane active" id="pills-terminal" role="tabpanel" aria-labelledby="pills-terminal-tab"
                     tabindex="0">
-                    <?php require ('components/terminal.php'); ?>
+                    <?php require ('pages/terminal.php'); ?>
                 </div>
                 <!-- Terminal-->
 
@@ -367,7 +233,7 @@ $ipTerm = array(
                 <!--Red en sucursal-->
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
                     tabindex="0">
-                    <?php require ('components/red.php'); ?>
+                    <?php require ('pages/red.php'); ?>
                 </div>
                 <!--Red en sucursal-->
 
@@ -376,7 +242,7 @@ $ipTerm = array(
                 <!--Checadores-->
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
                     tabindex="0">
-                    <?php require ('components/checador.php'); ?>
+                    <?php require ('pages/checador.php'); ?>
                 </div>
                 <!--Checadores-->
 
@@ -385,7 +251,7 @@ $ipTerm = array(
                 <!--computadoras-->
                 <div class="tab-pane fade" id="pills-computadoras" role="tabpanel"
                     aria-labelledby="pills-computadoras-tab" tabindex="0">
-                    <?php require ('components/computadora.php'); ?>
+                    <?php require ('pages/computadora.php'); ?>
                 </div>
                 <!--computadoras-->
 
@@ -393,7 +259,7 @@ $ipTerm = array(
                 <!--Impresora-->
                 <div class="tab-pane fade" id="pills-impresoras" role="tabpanel" 
                 aria-labelledby="pills-impresoras-tab" tabindex="0">
-                    <?php require ('components/impresora.php'); ?>
+                    <?php require ('pages/impresora.php'); ?>
                 </div>
                 <!--Impresora-->                    
 

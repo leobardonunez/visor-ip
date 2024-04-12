@@ -99,7 +99,6 @@ $ip_computadora = array(
 );?>
 
 
-
 <ul id="resultList" style="list-style:none;">
     <?php
     foreach ($ip_impresora as $datos) {

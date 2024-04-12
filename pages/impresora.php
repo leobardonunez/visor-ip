@@ -43,7 +43,7 @@ $ip_impresora = array(
     ),
 
     3 => array(
-        'Area' => 'Sad',
+        'Area' => 'Servicio a Domicilio',
         'Nombre' => 'Kyocera',
         'ip' => '192.168.1.200',
 
