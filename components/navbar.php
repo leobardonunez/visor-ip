@@ -16,12 +16,14 @@
         <li class="nav-item">
           <a class="nav-link" href="pages/pendiente.php">Pendientes</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.google.com/spreadsheets/d/1ZeXwjanPmKtzPVZyViMVwja2nQZWFC0rc8YIyN40alo/edit?pli=1#gid=585296394">HelpDesk</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Drive
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1ZeXwjanPmKtzPVZyViMVwja2nQZWFC0rc8YIyN40alo/edit?pli=1#gid=585296394">Incidencias</a></li>
+          <ul class="dropdown-menu">            
             <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1W0M-BHvFQhO11dp9KGOeN3qDO1HuacH_HE82kId3Q8c/edit?pli=1#gid=0">Ip de equipos</a></li>
             <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1ZHMJ7hG2dscIPcCIXcp-rxrv647tQ38Oy-tOPIXd5aw/edit">Reemplazo de toner</a></li>
           </ul>

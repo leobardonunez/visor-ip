@@ -1,24 +1,5 @@
 <?php
-class CheckTerminals
-{
-    public function myOS()
-    {
-        if (strtoupper(substr(PHP_OS, 0, 3)) === (chr(87) . chr(73) . chr(78)))
-            return false;
-    }
-
-    public function ping2($ip_addr2)
-    {
-        if ($this->myOS()) {
-            if (!exec("ping -n 1 -w 1 " . $ip_addr2 . " 2>NUL > NUL && (echo 0) || (echo 1"))
-                return true;
-        } else {
-            if (!exec("ping -q -c1 " . $ip_addr2 . " >/dev/null 2>&1 ; echo $?"))
-                return true;
-        }
-        return false;
-    }
-}
+error_reporting(0);
 
 $ipTermterminals = array(
     0 => array(
@@ -83,8 +64,8 @@ $ipTermterminals = array(
     ),
     11 => array(
         'sucursal' => 'Rosales',
-        'ip' => '192.168.22.59',
-        'ip2' => '192.168.22.76'
+        'ip' => '192.168.22.5',
+        'ip2' => '192.168.22.4'
     ),
     12 => array(
         'sucursal' => 'Higuera de Zaragoza',
@@ -138,6 +119,30 @@ $ipTermterminals = array(
 
 ?>
 
+
+<!---------------Modal------------->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar ip de terminal</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Caja 1:</p> <input type="text" class="form-control shadow-lg"/><br>
+        <p>Caja 2:</p> <input type="text" class="form-control shadow-lg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir sin guardar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------Modal------------->
+
+
 <ul id="resultList" style="list-style:none;">
             <?php
             foreach ($ipTermterminals as $datos) {
@@ -145,7 +150,7 @@ $ipTermterminals = array(
                 <li style="display: inline-block; margin-right: 10px;">
                     <div class="card mb-3 p-2 shadow-lg m-2 rounded" style="width: 16rem; background-color:#F2F2F2;">
                         <div class="card-body">
-                            <h5 class="card-title">
+                            <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button">
                                 <?php echo $datos['sucursal'] ?>
                             </h5>
                             <p class="card-text">Caja 1:

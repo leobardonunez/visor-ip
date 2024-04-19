@@ -1,24 +1,4 @@
 <?php
-class CheckRed
-{
-    public function myOS()
-    {
-        if (strtoupper(substr(PHP_OS, 0, 3)) === (chr(87) . chr(73) . chr(78)))
-            return false;
-    }
-
-    public function pingRed($ip_red)
-    {
-        if ($this->myOS()) {
-            if (!exec("ping -n 1 -w 1 " . $ip_red . " 2>NUL > NUL && (echo 0) || (echo 1"))
-                return true;
-        } else {
-            if (!exec("ping -q -c1 " . $ip_red . " >/dev/null 2>&1 ; echo $?"))
-                return true;
-        }
-        return false;
-    }
-}
 
 $ipRed = array(
 
@@ -166,17 +146,6 @@ $ipRed = array(
                         }
                         ?>
                     </p>
-                    <button type="button" class="btn btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z">
-                            </path>
-                            <path
-                                d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466">
-                            </path>
-                        </svg>
-                        Recargar
-                    </button>
                 </div>
             </div>
         </li>

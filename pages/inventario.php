@@ -1,4 +1,3 @@
-<?php include 'http://localhost/VisorChecadores/components/navbar.php' ?>
 
 <div class="col mt-2 ms-4">
     <table class="table">

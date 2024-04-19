@@ -25,7 +25,8 @@ $ip_computadora = array(
     0 => array(
         'Sucursal' => 'Jiquilpan',
         'ip' => '192.168.',
-        'ip2' => '192.168.',            
+        'ip2' => '192.168.',
+                            
     ),
 
     1 => array(

@@ -26,130 +26,81 @@ class CheckDevice
     }
 }
 
+class CheckRed
+{
 
-$ipTerm = array(
+    public function myOS()
+    {
+        if (strtoupper(substr(PHP_OS, 0, 3)) === (chr(87) . chr(73) . chr(78)))
+            return true;
 
-    0 => array(
-        'sucursal' => 'Jiquilpan',
-        'ip' => '192.168.11.1',
+        return false;
+    }
 
-    ),
+    public function pingRed($ip_addr)
+    {
+        if ($this->myOS()) {
+            if (!exec("ping -n 1 -w 1 " . $ip_addr . " 2>NUL > NUL && (echo 0) || (echo 1)"))
+                return true;
+        } else {
+            if (!exec("ping -q -c1 " . $ip_addr . " >/dev/null 2>&1 ; echo $?"))
+                return true;
+        }
 
-    1 => array(
-        'sucursal' => 'Zacatecas',
-        'ip' => '192.168.12.1',
+        return false;
+    }
+}
 
-    ),
-    2 => array(
-        'sucursal' => 'Serdan',
-        'ip' => '192.168.65.1',
+class CheckChecador
+{
 
-    ),
+    public function myOS()
+    {
+        if (strtoupper(substr(PHP_OS, 0, 3)) === (chr(87) . chr(73) . chr(78)))
+            return true;
 
-    3 => array(
-        'sucursal' => 'Degollado',
-        'ip' => '192.168.14.1',
+        return false;
+    }
 
-    ),
+    public function pingChecador($ip_addr)
+    {
+        if ($this->myOS()) {
+            if (!exec("ping -n 1 -w 1 " . $ip_addr . " 2>NUL > NUL && (echo 0) || (echo 1)"))
+                return true;
+        } else {
+            if (!exec("ping -q -c1 " . $ip_addr . " >/dev/null 2>&1 ; echo $?"))
+                return true;
+        }
 
-    4 => array(
-        'sucursal' => 'Rio Fuerte',
-        'ip' => '192.168.116.1',
+        return false;
+    }
+}
 
-    ),
-    5 => array(
-        'sucursal' => 'Toledo',
-        'ip' => '192.168.16.1',
 
-    ),
+class CheckImpresora
+{
 
-    6 => array(
-        'sucursal' => 'Los Angeles',
-        'ip' => '192.168.17.1',
+    public function myOS()
+    {
+        if (strtoupper(substr(PHP_OS, 0, 3)) === (chr(87) . chr(73) . chr(78)))
+            return true;
 
-    ),
-    7 => array(
-        'sucursal' => 'Jardines',
-        'ip' => '192.168.18.1',
+        return false;
+    }
 
-    ),
+    public function pingImpresora($ip_addr)
+    {
+        if ($this->myOS()) {
+            if (!exec("ping -n 1 -w 1 " . $ip_addr . " 2>NUL > NUL && (echo 0) || (echo 1)"))
+                return true;
+        } else {
+            if (!exec("ping -q -c1 " . $ip_addr . " >/dev/null 2>&1 ; echo $?"))
+                return true;
+        }
 
-    8 => array(
-        'sucursal' => 'Mañanitas',
-        'ip' => '192.168.19.1',
-
-    ),
-
-    9 => array(
-        'sucursal' => 'Ahome',
-        'ip' => '192.168.20.1',
-
-    ),
-
-    10 => array(
-        'sucursal' => 'San Miguel',
-        'ip' => '192.168.21.1',
-
-    ),
-
-    11 => array(
-        'sucursal' => 'Rosales',
-        'ip' => '192.168.22.1',
-
-    ),
-    12 => array(
-        'sucursal' => 'Higuera ',
-        'ip' => '192.168.23.1',
-
-    ),
-    13 => array(
-        'sucursal' => 'Pedro Anaya',
-        'ip' => '192.168.51.1',
-
-    ),
-
-    14 => array(
-        'sucursal' => 'Alamos',
-        'ip' => '192.168.25.1',
-
-    ),
-
-    15 => array(
-        'sucursal' => 'Topolobampo',
-        'ip' => '192.168.26.1',
-
-    ),
-
-    16 => array(
-        'sucursal' => 'Mochicahui',
-        'ip' => '192.168.27.1',
-
-    ),
-    17 => array(
-        'sucursal' => 'El Carrizo',
-        'ip' => '192.168.30.1',
-
-    ),
-
-    18 => array(
-        'sucursal' => 'Laureles',
-        'ip' => '192.168.29.1',
-
-    ),
-
-    19 => array(
-        'sucursal' => 'Ejido Mexico',
-        'ip' => '192.168.31.1',
-
-    ),
-
-    20 => array(
-        'sucursal' => 'Constancia',
-        'ip' => '192.168.32.1',
-
-    )
-
-);
+        return false;
+    }
+}
 
 
 ?>
@@ -168,7 +119,7 @@ $ipTerm = array(
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Panel de equipos</title>
     <!--Navbar-->
-    <?php require ('components/navbar.php'); ?>
+    <?php include ('components/navbar.php'); ?>
     <!--Navbar-->
 </head>
 <br><br>
