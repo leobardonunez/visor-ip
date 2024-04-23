@@ -1,29 +1,10 @@
 <?php
-class CheckComputadora
-{
-    public function myOS()
-    {
-        if (strtoupper(substr(PHP_OS, 0, 3)) === (chr(87) . chr(73) . chr(78)))
-            return false;
-    }
 
-    public function pingComputadora($ip_computadora)
-    {
-        if ($this->myOS()) {
-            if (!exec("ping -n 1 -w 1 " . $ip_computadora . " 2>NUL > NUL && (echo 0) || (echo 1"))
-                return true;
-        } else {
-            if (!exec("ping -q -c1 " . $ip_computadora . " >/dev/null 2>&1 ; echo $?"))
-                return true;
-        }
-        return false;
-    }
-}
 
 $ip_computadora = array(
 
     0 => array(
-        'Sucursal' => 'Jiquilpan',
+        'Sucursal' => '',
         'ip' => '192.168.',
         'ip2' => '192.168.',
                             
@@ -112,7 +93,7 @@ $ip_computadora = array(
                     </h5>
                     <p class="card-text">
                         <?php echo $datos['ip'] ?>
-                        <?php if ((new CheckImpresora())->pingImpresora($datos['ip'])) {
+                        <?php if ((new CheckComputadora())->pingCpu($datos['ip'])) {
                             ?>
                             <span class="badge" style="background-color:gray;">Activo</span>
                         <?php } else {

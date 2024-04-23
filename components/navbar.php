@@ -1,26 +1,26 @@
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand">Soporte TI</a>
+    <a class="navbar-brand" style="color: white;">Soporte TI</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="index.php" style="color: white;">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/inventario.php">Inventario</a>
+          <a class="nav-link" href="pages/inventario.php" style="color: white;">Inventario</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/pendiente.php">Pendientes</a>
+          <a class="nav-link" href="pages/pendiente.php" style="color: white;">Pendientes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://docs.google.com/spreadsheets/d/1ZeXwjanPmKtzPVZyViMVwja2nQZWFC0rc8YIyN40alo/edit?pli=1#gid=585296394">HelpDesk</a>
+          <a class="nav-link" style="color: white;" href="https://docs.google.com/spreadsheets/d/1ZeXwjanPmKtzPVZyViMVwja2nQZWFC0rc8YIyN40alo/edit?pli=1#gid=585296394">HelpDesk</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
             Drive
           </a>
           <ul class="dropdown-menu">            

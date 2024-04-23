@@ -38,7 +38,7 @@ $ipChecador = array(
 
     6 => array(
         'sucursal' => 'Rio Fuerte',
-        'ip' => '192.168.116.150',
+        'ip' => '192.168.116.151',
 
     ),
     7 => array(
