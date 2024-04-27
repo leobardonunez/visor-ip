@@ -4,120 +4,201 @@
 $ip_computadora = array(
 
     0 => array(
-        'Sucursal' => '',
-        'ip' => '192.168.',
-        'ip2' => '192.168.',
+        'number'=> '1',
+        'sucursal' => 'Jiquilpan',
+        'caja1' => '192.168.11.98',
+        'caja2' => '192.168.11.99',
                             
     ),
 
     1 => array(
-        'Area' => 'Zacatecas',
-        'Nombre' => 'Kyocera',
-        'ip' => '192.168.1.50',
+        'number'=> '2',
+        'sucursal' => 'Zacatecas',
+        'caja1' => '192.168.',
+        'caja2' => '192.168.',
+        'caja3' => '192.168.'
 
     ),
     2 => array(
-        'Area' => 'Serdan',
-        'Nombre' => 'Kyocera',
-        'ip' => '192.168.1.51',
-
+        'number'=> '3',
+        'sucursal' => 'Serdan',
+        'caja1' => '192.168.',
+        'caja2' => '192.168.1.51',        
     ),
 
     3 => array(
-        'Area' => 'Degollado',
-        'Nombre' => 'Kyocera',
-        'ip' => '192.168.1.200',
+        'number'=> '4',
+        'sucursal' => 'Degollado',
+        'caja1' => '192.168.',
+        'caja2' => '192.168.1.200',
+        'caja3'=> '192.168.'
 
     ),
     4 => array(
-        'Area' => 'Rio Fuerte',
-        'Nombre' => 'Kyocera',
-        'ip' => '192.168.1.200',
+        'number'=> '5',
+        'sucursal' => 'Rio Fuerte',
+        'caja1' => '192.168.',
+        'caja2' => '192.168.1.200',
 
     ),
 
     5 => array(
-        'Area' => 'Toledo',
-        'Nombre' => 'Kyocera',
-        'ip' => '192.168.1.200',
+        'number'=> '6',
+        'sucursal' => 'Toledo',
+        'caja1' => '192.168.',
+        'caja2' => '192.168.1.200',
 
     ),
 
     6 => array(
-        'Area' => 'Los Angeles',
-        'Nombre' => 'Kyocera',
-        'ip' => '192.168.1.200',
+        'number'=> '7',
+        'sucursal' => 'Los Angeles',
+        'caja1' => '192.168.',
+        'caja2' => '192.168.1.200',
 
     ),
     
     7 => array(
-        'Area' => 'Jardines',
-        'Nombre' => 'Kyocera',
-        'ip' => '192.168.1.200',
+        'number'=> '8',
+        'sucursal' => 'Jardines',
+        'caja1' => '192.168.',
+        'caja2' => '192.168.1.200',
 
     ),
 
     8 => array(
-        'Area' => 'Mañanitas',
-        'Nombre' => 'Kyocera',
-        'ip' => '192.168.1.200',
+        'number'=> '9',
+        'sucursal' => 'Mañanitas',
+        'caja1' => '192.168.',
+        'caja2' => '192.168.1.200',
 
     ),
 
     9 => array(
-        'Area' => 'Ahome',
-        'Nombre' => 'Kyocera',
-        'ip' => '192.168.1.200',
-
+        'number'=> '10',
+        'sucursal' => 'Ahome',
+        'caja1' => '192.168.',
+        'caja2' => '192.168.1.200',
+        'caja3' =>'192.168.'
     ),
 
     10 => array(
-        'Area' => 'Degollado',
-        'Nombre' => 'Kyocera',
-        'ip' => '192.168.1.200',
+        'number'=> '11',
+        'sucursal' => 'San Miguel',
+        'caja1' => 'Kyocera',
+        'caja2' => '192.168.1.200',
 
+    ),
+
+    11 => array(
+        'number'=> '12',
+        'sucursal'=> 'Rosales',
+        'caja1'=>'192.168.',
+        'caja2'=> '192.168.'
+    ),
+
+    12 => array(
+        'number'=>'13',
+        'sucursal'=> 'Higuera de zaragoza',
+        'caja1'=> '192.168.',
+        'caja2'=> '192.168',
+        'caja3'=> '192.168'
+    ),
+    13=> array(
+        'number'=> '13',
+        'sucursal' =>'Pedro anaya',
+        'caja1'=> '192.168.',
+        'caja2'=> '192.168.'
+    ),
+    14=> array(
+        'number'=>'14',
+        'sucursal'=>'Alamos',
+        'caja1'=>'192.168.',
+        'caja2'=> '192.168.'
+    ),
+    15=> array(
+        'number'=>'15',
+        'sucursal'=>'Topolobampo',
+        'caja1'=> '192.168.',
+        'caja2'=> '192.168.'
+    ),
+    16=> array(
+        'number'=> '16',
+        'sucursal'=> 'Mochicahui',
+        'caja1'=> '192.168.',
+        'caja2'=>'192.168.'
+    ),
+    17=> array(
+        'number'=> '17',
+        'sucursal'=> 'El carrizo',
+        'caja1'=> '192.168.',
+        'caja2'=>'192.168.',
+        'caja3'=> '192.168'
+    ),
+    18=> array(
+        'number'=> '18',
+        'sucursal'=> 'Laureles',
+        'caja1'=> '192.168.',
+        'caja2'=>'192.168.'
+    ),
+    19=> array(
+        'number'=> '19',
+        'sucursal'=> 'Ejido mexico',
+        'caja1'=> '192.168.',
+        'caja2'=>'192.168.'
+    ),
+    20=> array(
+        'number'=> '20',
+        'sucursal'=> 'Constancia',
+        'caja1'=> '192.168.',
+        'caja2'=>'192.168.',
+        'caja3'=> '192.168.'
     )
-
 );?>
-
-
-<ul id="resultList" style="list-style:none;">
+<br>
+<table>
+<thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Sucursal</th>
+      <th scope="col">Caja 1</th>
+      <th scope="col">Caja 2</th>
+      <th scope="col">Caja 3</th>
+    </tr>
+  </thead>
     <?php
-    foreach ($ip_impresora as $datos) {
-        ?>
-        <li style="display: inline-block; margin-right: 10px;">
-            <div class="card mb-3 p-2 shadow-lg m-2 rounded" style="width: 16rem; background-color:#F2F2F2;">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <?php echo $datos['Area'] ?>
-                    </h5>
-                    <p class="card-text">
-                        <?php echo $datos['ip'] ?>
-                        <?php if ((new CheckComputadora())->pingCpu($datos['ip'])) {
-                            ?>
-                            <span class="badge" style="background-color:gray;">Activo</span>
-                        <?php } else {
-                            echo '<span class="badge bg-danger">Inactivo</span>';
-                        }
-                        ?>
-                    </p>
-                    <button type="button" class="btn btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z">
-                            </path>
-                            <path
-                                d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466">
-                            </path>
-                        </svg>
-                        Recargar
-                    </button>
-                </div>
-            </div>
-        </li>
-    <?php }
+    foreach ($ip_computadora as $datos){    
     ?>
-</ul>
-
-
-
+    <tr>
+        <th scope="row"><?php echo $datos['number']?></th>
+        <th><?php echo $datos['sucursal']?></th>
+        <th><?php echo $datos['caja1'];
+      
+        if ((new CheckComputadora())->pingCpu($datos['caja1'])){
+            echo '<span class="badge" style="background-color:gray;">Activo</span>'; }
+             else{
+        echo '<span class="badge bg-danger">Inactivo</span>';
+    }    
+    ?>    
+    </th>
+    <th><?php echo $datos['caja2'];
+               if ((new CheckComputadora())->pingCpu($datos['caja2'])){
+                echo '<span class="badge" style="background-color:gray;">Activo</span>'; }
+                 else{
+            echo '<span class="badge bg-danger">Inactivo</span>';
+        }   
+    ?>
+    </th>
+    <th><?php echo $datos['caja3'];
+               if ((new CheckComputadora())->pingCpu($datos['caja3'])){
+                echo '<span class="badge" style="background-color:gray;">Activo</span>'; }
+                 else{
+            echo '<span class="badge bg-danger">Inactivo</span>';
+        }   
+    ?>
+    </th>
+    </tr>
+    <?php }
+    ?>    
+  </tbody>
+</table>
