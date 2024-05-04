@@ -28,7 +28,22 @@ $ip_impresora = array(
         'Nombre' => 'Kyocera',
         'ip' => '192.168.1.51',
 
-    )
+    ),
+    4 => array(
+        'Area' => 'Supervisores Planta',
+        'Nombre' => 'Samsung',
+        'ip' => '192.168.55.172',
+    ),
+    5 => array(
+        'Area' => 'No se',
+        'Nombre'=> 'Hp Laser 107w',
+        'ip'=> '192.168.55.127',
+    ),
+    6 => array(
+        'Area' => 'Oficina Eliezer',
+        'Nombre' => 'Hp LaserJet M15w',
+        'ip'=> '192.168.55.101'
+    ),
 
 );?>
 

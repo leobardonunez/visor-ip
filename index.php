@@ -149,6 +149,7 @@ class CheckComputadora
 </head>
 <br><br>
 <!--Actualizaciones: añadir link a ip para que se abra ventana de cmd con un ping sostenido a esa ip-->
+
 <body>
     <div class="row">
         <div class="col"></div>
@@ -187,7 +188,7 @@ class CheckComputadora
     </div>
 
     <div class="container">
-        <div class="input-group mb-3 search-container">            
+        <div class="input-group mb-3 search-container">
             <input type="text" class="form-control shadow-lg" placeholder="Buscar..." id="searchInput"
                 style="display: inline-block; margin-right: 10px;">
         </div>
@@ -233,11 +234,11 @@ class CheckComputadora
 
 
                 <!--Impresora-->
-                <div class="tab-pane fade" id="pills-impresoras" role="tabpanel" 
-                aria-labelledby="pills-impresoras-tab" tabindex="0">
+                <div class="tab-pane fade" id="pills-impresoras" role="tabpanel" aria-labelledby="pills-impresoras-tab"
+                    tabindex="0">
                     <?php require ('pages/impresora.php'); ?>
                 </div>
-                <!--Impresora-->                    
+                <!--Impresora-->
 
 
 
@@ -275,25 +276,6 @@ class CheckComputadora
 
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
 
 // if ((new CheckDevice())->ping($ip_addr))
@@ -303,10 +285,10 @@ class CheckComputadora
 ?>
 
 <script>
-    (() => {
-        // Se recarga cada 5 minutos o bien cada 300 segundos
-        setInterval("location.reload()", 300000);
-        // setInterval("location.reload()", 180000);
-        // setInterval("location.reload()", 15000);
-    })();
+    // (() => {
+    //     Se recarga cada 5 minutos o bien cada 300 segundos
+    //     setInterval("location.reload()", 300000);
+    //     setInterval("location.reload()", 180000);
+    //     setInterval("location.reload()", 15000);
+    // })();
 </script>

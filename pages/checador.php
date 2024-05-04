@@ -149,6 +149,7 @@ $ipChecador = array(
                         <?php echo $datos['ip'] ?>
                         <?php if ((new CheckChecador())->pingChecador($datos['ip'])) {
                             ?>
+
                             <span class="badge" style="background-color:gray;">Activo</span>
                         <?php } else {
                             echo '<span class="badge bg-danger">Inactivo</span>';

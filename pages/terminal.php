@@ -122,76 +122,92 @@ $ipTermterminals = array(
 
 <!---------------Modal------------->
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar ip de terminal</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Caja 1:</p> <input type="text" class="form-control shadow-lg"/><br>
-        <p>Caja 2:</p> <input type="text" class="form-control shadow-lg">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir sin guardar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
-      </div>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar ip de terminal</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Caja 1:</p> <input type="text" class="form-control shadow-lg" /><br>
+                <p>Caja 2:</p> <input type="text" class="form-control shadow-lg" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir sin guardar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <!---------------Modal------------->
 
-
+<button type="button" class="btn btn-success" onclick="loadDoc()">Refrescar</button>
 <ul id="resultList" style="list-style:none;">
-            <?php
-            foreach ($ipTermterminals as $datos) {
-                ?>
-                <li style="display: inline-block; margin-right: 10px;">
-                    <div class="card mb-3 p-2 shadow-lg m-2 rounded" style="width: 16rem; background-color:#F2F2F2;">
-                        <div class="card-body">
-                            <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button">
-                                <?php echo $datos['sucursal'] ?>
-                            </h5>
-                            <p class="card-text">Caja 1:
-                                
-                                <?php if ((new CheckDevice())->ping($datos['ip'])) {
-                                    ?>
-                                    <span class="badge" style="background-color:gray;"><?php echo $datos['ip'] ?></span>
-                                <?php } else {
-                                    echo '<span class="badge bg-danger">'.$datos['ip'].'</span>';
-                                }
-                                ?><br>                            
-                                Caja 2:                                
-                                <?php
-                                if ((new CheckDevice())->ping($datos['ip2'])) {
-                                    ?>
-                                    <span class="badge" style="background-color:gray;"><?php echo $datos['ip2'] ?></span>
-                                    <?php
-                                } else {
-                                    echo '<span class="badge bg-danger">'.$datos['ip2'].'</span>';
-                                }
-                                ?><br>
-                                
-                                <?php if ($datos['ip3'] == '') {
-                                    echo 'No existe caja 3';
-                                } else {
+    <?php
+    foreach ($ipTermterminals as $datos) {
+        ?>
+    <li style="display: inline-block; margin-right: 10px;">
+        <div class="card mb-3 p-2 shadow-lg m-2 rounded" style="width: 16rem; background-color:#F2F2F2;">
+            <div class="card-body">
+                <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button">
+                    <?php echo $datos['sucursal'] ?>
+                </h5>
+                <p class="card-text">Caja 1:
 
-                                    if ((new CheckDevice())->ping($datos['ip3'])) {
-                                        ?>
-                                        Caja 3:
-                                         <span class="badge"
-                                            style="background-color:gray;"><?php echo $datos['ip3']; ?></span>
-                                        <?php
-                                    } else {
-                                        echo "Caja 3: ", '<span class="badge bg-danger">'.$datos['ip3'].'</span>';
-                                    }
+                    <?php if ((new CheckDevice())->ping($datos['ip'])) {
+                        ?>
+                    <span class="badge" style="background-color:gray;">
+                        <?php echo $datos['ip'] ?>
+                    </span>
+                    <?php } else {
+                        echo '<span class="badge bg-danger">' . $datos['ip'] . '</span>';
+                    }
+                    ?><br>
+                    Caja 2:
+                    <?php
+                    if ((new CheckDevice())->ping($datos['ip2'])) {
+                        ?>
+                    <span class="badge" style="background-color:gray;">
+                        <?php echo $datos['ip2'] ?>
+                    </span>
+                    <?php
+                    } else {
+                        echo '<span class="badge bg-danger">' . $datos['ip2'] . '</span>';
+                    }
+                    ?><br>
 
-                                } ?>
-                            </p>                    
-                        </div>
-                    </div>
-                </li>
-            <?php }
-            ?>
-        </ul>
+                    <?php if ($datos['ip3'] == '') {
+                        echo 'No existe caja 3';
+                    } else {
+
+                        if ((new CheckDevice())->ping($datos['ip3'])) {
+                            ?>
+                    Caja 3:
+                    <span class="badge" style="background-color:gray;">
+                        <?php echo $datos['ip3']; ?>
+                    </span>
+                    <?php
+                        } else {
+                            echo "Caja 3: ", '<span class="badge bg-danger">' . $datos['ip3'] . '</span>';
+                        }
+
+                    } ?>
+                </p>
+            </div>
+        </div>
+    </li>
+    <?php }
+    ?>
+</ul>
+
+<script>
+    //este es el metodo que lo mantendra actualizado 
+    $(document).ready(function () {
+        var refreshId = setInterval(function () {
+            console.log("Hola")
+            $('#resultList').load('index.php');//actualizas el div
+        }, 4000);
+    });
+</script>
