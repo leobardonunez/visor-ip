@@ -129,6 +129,11 @@ $ipChecador = array(
         'sucursal' => 'Constancia',
         'ip' => '192.168.32.50',
 
+    ),
+    23 => array(
+        'sucursal' => 'Gabriel Leyva Solano',
+        'ip' => '192.168.33.78',
+
     )
 
 );?>

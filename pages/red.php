@@ -120,6 +120,10 @@ $ipRed = array(
         'sucursal' => 'Constancia',
         'ip' => '192.168.32.1',
 
+    ),
+    21 => array(
+        'sucursal'=> 'Gabriel Leyva Solano',
+        'ip'=> '192.168.33.1'
     )
 
 );?>

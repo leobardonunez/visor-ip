@@ -1,29 +1,10 @@
-Fecha y hora: 2024-05-02 21:09:17 IP: 192.168.19.1 Sucursal:  Mañanitas
-Fecha y hora: 2024-05-02 21:09:18 IP: 192.168.29.1 Sucursal:  Laureles
-Fecha y hora: 2024-05-02 21:12:33 IP: 192.168.21.1 Sucursal:  San Miguel
-Fecha y hora: 2024-05-02 21:44:47 IP: 192.168.18.1 Sucursal:  Jardines
-Fecha y hora: 2024-05-02 21:54:05 IP: 192.168.18.1 Sucursal:  Jardines
-Fecha y hora: 2024-05-02 22:03:36 IP: 192.168.19.1 Sucursal:  Mañanitas
-Fecha y hora: 2024-05-02 22:03:36 IP: 192.168.29.1 Sucursal:  Laureles
-Fecha y hora: 2024-05-02 22:08:52 IP: 192.168.21.1 Sucursal:  San Miguel
-Fecha y hora: 2024-05-02 22:24:37 IP: 192.168.29.1 Sucursal:  Laureles
-Fecha y hora: 2024-05-02 23:22:20 IP: 192.168.32.1 Sucursal:  Constancia
-Fecha y hora: 2024-05-02 23:38:04 IP: 192.168.60.1 Sucursal:  Rosales
-Fecha y hora: 2024-05-02 23:43:18 IP: 192.168.21.1 Sucursal:  San Miguel
-Fecha y hora: 2024-05-02 23:53:49 IP: 192.168.67.1 Sucursal:  Mochicahui
-Fecha y hora: 2024-05-03 00:23:58 IP: 192.168.29.1 Sucursal:  Laureles
-Fecha y hora: 2024-05-03 00:24:29 IP: 192.168.63.1 Sucursal:  Los Angeles
-Fecha y hora: 2024-05-03 00:25:07 IP: 192.168.19.1 Sucursal:  Mañanitas
-Fecha y hora: 2024-05-03 00:25:08 IP: 192.168.32.1 Sucursal:  Constancia
-Fecha y hora: 2024-05-03 00:25:31 IP: 192.168.29.1 Sucursal:  Laureles
-Fecha y hora: 2024-05-03 00:25:41 IP: 192.168.60.1 Sucursal:  Rosales
-Fecha y hora: 2024-05-03 00:25:45 IP: 192.168.31.1 Sucursal:  Ejido Mexico
-Fecha y hora: 2024-05-03 00:26:07 IP: 192.168.67.1 Sucursal:  Mochicahui
-Fecha y hora: 2024-05-03 00:26:08 IP: 192.168.12.1 Sucursal:  Zacatecas
-Fecha y hora: 2024-05-03 00:26:16 IP: 192.168.30.1 Sucursal:  El Carrizo
-Fecha y hora: 2024-05-03 00:32:06 IP: 192.168.20.1 Sucursal:  Ahome
-Fecha y hora: 2024-05-03 00:44:54 IP: 192.168.67.1 Sucursal:  Mochicahui
-Fecha y hora: 2024-05-03 20:09:57 IP: 192.168.18.1 Sucursal:  Jardines
-Fecha y hora: 2024-05-03 20:35:57 IP: 192.168.18.1 Sucursal:  Jardines
-Fecha y hora: 2024-05-03 20:36:27 IP: 192.168.19.1 Sucursal:  Mañanitas
-Fecha y hora: 2024-05-03 20:36:28 IP: 192.168.29.1 Sucursal:  Laureles
+Fecha y hora: 2024-05-15 20:31:46 IP: 192.168.23.1 Sucursal:  Higuera 
+Fecha y hora: 2024-05-15 20:35:31 IP: 192.168.23.1 Sucursal:  Higuera 
+Fecha y hora: 2024-05-17 03:26:24 IP: 192.168.51.1 Sucursal:  Pedro Anaya
+Fecha y hora: 2024-05-17 17:28:57 IP: 192.168.12.1 Sucursal:  Zacatecas
+Fecha y hora: 2024-05-17 17:28:58 IP: 192.168.20.1 Sucursal:  Ahome
+Fecha y hora: 2024-05-17 17:28:59 IP: 192.168.23.1 Sucursal:  Higuera 
+Fecha y hora: 2024-05-17 17:28:59 IP: 192.168.25.1 Sucursal:  Alamos
+Fecha y hora: 2024-05-17 17:29:00 IP: 192.168.30.1 Sucursal:  El Carrizo
+Fecha y hora: 2024-05-17 17:29:01 IP: 192.168.32.1 Sucursal:  Constancia
+Fecha y hora: 2024-05-18 01:01:20 IP: 192.168.21.1 Sucursal:  San Miguel

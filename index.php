@@ -1,6 +1,29 @@
 <?php
 error_reporting(0);
 
+
+class CheckBascula{
+    public function myOS()
+    {
+        if (strtoupper(substr(PHP_OS, 0, 3)) === (chr(87) . chr(73) . chr(78)))
+            return true;
+
+        return false;
+    }
+
+    public function pingBascula($ip_addr)
+    {
+        if ($this->myOS()) {
+            if (!exec("ping -n 1 -w 1 " . $ip_addr . " 2>NUL > NUL && (echo 0) || (echo 1)"))
+                return true;
+        } else {
+            if (!exec("ping -q -c1 " . $ip_addr . " >/dev/null 2>&1 ; echo $?"))
+                return true;
+        }
+
+        return false;
+    }
+}
 class CheckDevice
 {
 
@@ -182,6 +205,12 @@ class CheckComputadora
                         data-bs-target="#pills-impresoras" type="button" role="tab" aria-controls="pills-impresoras"
                         aria-selected="false">Impresoras</button>
                 </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-basculas-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-basculas" type="button" role="tab" aria-controls="pills-basculas"
+                        aria-selected="false">Bascula</button>
+                </li>
             </ul>
         </div>
         <div class="col"></div>
@@ -240,7 +269,18 @@ class CheckComputadora
                 </div>
                 <!--Impresora-->
 
+                    <!--Bascula-->
+                    <div class="tab-pane fade" id="pills-basculas" role="tabpanel" aria-labelledby="pills-impresoras-tab"
+                    tabindex="0">
+                    <?php require ('pages/bascula.php'); ?>
+                </div>
+                <!--Bascula-->
 
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-basculas-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-basculas" type="button" role="tab" aria-controls="pills-basculas"
+                        aria-selected="false">Bascula</button>
+                </li>
 
                 <!--Tabs-->
             </div>

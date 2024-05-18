@@ -21,8 +21,7 @@
             <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1W0M-BHvFQhO11dp9KGOeN3qDO1HuacH_HE82kId3Q8c/edit?pli=1#gid=0">Ip de equipos</a></li>
             <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1ZHMJ7hG2dscIPcCIXcp-rxrv647tQ38Oy-tOPIXd5aw/edit">Reemplazo de toner</a></li>
             <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1ZeXwjanPmKtzPVZyViMVwja2nQZWFC0rc8YIyN40alo/edit?pli=1#gid=585296394">HelpDesk</a></li>
-            <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1mRXjnJOphsMfm38TaHy5e_PsyGQIDFfmjmCX_y4X2y0/edit#gid=0">Listado de Terminales</a></li>
-            <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1ZHMJ7hG2dscIPcCIXcp-rxrv647tQ38Oy-tOPIXd5aw/edit#gid=0">Reemplazo de Toner</a></li>
+            <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1mRXjnJOphsMfm38TaHy5e_PsyGQIDFfmjmCX_y4X2y0/edit#gid=0">Listado de Terminales</a></li>            
           </ul>
         </li>
       </ul>
