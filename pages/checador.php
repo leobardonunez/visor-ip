@@ -81,7 +81,7 @@ $ipChecador = array(
     ),
     14 => array(
         'sucursal' => 'Higuera ',
-        'ip' => '192.168.23.201',
+        'ip' => '192.168.20.94',
 
     ),
     15 => array(
@@ -109,7 +109,7 @@ $ipChecador = array(
     ),
     19 => array(
         'sucursal' => 'El Carrizo',
-        'ip' => '192.168.30.50',
+        'ip' => '192.168.30.200',
 
     ),
 

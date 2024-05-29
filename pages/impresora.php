@@ -35,7 +35,7 @@ $ip_impresora = array(
         'ip' => '192.168.55.172',
     ),
     5 => array(
-        'Area' => 'No se',
+        'Area' => 'Oficina Hugo Sanchez',
         'Nombre'=> 'Hp Laser 107w',
         'ip'=> '192.168.55.127',
     ),

@@ -5,27 +5,23 @@ $ipTermBasculas = array(
     0 => array(
         'sucursal' => 'Gabriel Leyva Solano',
         'ip' => '192.168.33.79',
-        'ip2' => ''
+        'ip2' => '192.168.33.77'
      ),
 );
 
 ?>
 
 
-<!-- <ul id="resultList" style="list-style:none;">
+
+<ul id="resultList" style="list-style:none;">
     <?php
     foreach ($ipTermBasculas as $datos) {
         ?>
-    <li style="display: inline-block; margin-right: 10px;">
-        <div class="card mb-3 p-2 shadow-lg m-2 rounded" style="width: 16rem; background-color:#F2F2F2;">
-            <div class="card-body">
-                <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button">
-                    <?php echo $datos['sucursal'] ?>
-                </h5>
-                <p class="card-text">Bascula 1:
-
-                  
-                <?php echo $datos['Area'] ?>
+        <li style="display: inline-block; margin-right: 10px;">
+            <div class="card mb-3 p-2 shadow-lg m-2 rounded" style="width: 16rem; background-color:#F2F2F2;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <?php echo $datos['sucursal'] ?>
                     </h5>
                     <p class="card-text">
                         <?php echo $datos['ip'] ?>
@@ -36,14 +32,14 @@ $ipTermBasculas = array(
                             echo '<span class="badge bg-danger">Inactivo</span>';
                         }
                         ?>
-                    </p>  
-
+                    </p>
+                </div>
             </div>
-        </div>
-    </li>
+        </li>
     <?php }
     ?>
-</ul> -->
+</ul>
+
 
 <!-- <script>
     //este es el metodo que lo mantendra actualizado 
@@ -54,5 +50,3 @@ $ipTermBasculas = array(
         }, 4000);
     });
 </script> -->
-
-<h5>hola</h5>

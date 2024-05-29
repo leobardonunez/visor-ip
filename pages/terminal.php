@@ -38,7 +38,7 @@ $ipTermterminals = array(
     ),
     6 => array(
         'sucursal' => 'Los Angeles',
-        'ip' => '192.168.63.4',
+        'ip' => '192.168.17.4',
         'ip2' => '192.168.17.5'
     ),
     7 => array(
@@ -69,8 +69,8 @@ $ipTermterminals = array(
     ),
     12 => array(
         'sucursal' => 'Higuera de Zaragoza',
-        'ip' => '192.168.23.4',
-        'ip2' => '192.168.23.84',
+        'ip' => '192.168.20.89',
+        'ip2' => '192.168.20.78',
         'ip3' => '192.168.23.83'
     ),
     13 => array(
