@@ -178,7 +178,7 @@ class CheckComputadora
         <div class="col"></div>
         <div class="col">
 
-            <h1>Visor de Ip de equipos</h1>
+            <h1>Sucursales</h1>
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="pills-terminal-tab" data-bs-toggle="pill"
@@ -188,7 +188,7 @@ class CheckComputadora
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                         data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                        aria-selected="false">Red en sucursal</button>
+                        aria-selected="false">Estado de la red</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
@@ -210,6 +210,17 @@ class CheckComputadora
                     <button class="nav-link" id="pills-basculas-tab" data-bs-toggle="pill"
                         data-bs-target="#pills-basculas" type="button" role="tab" aria-controls="pills-basculas"
                         aria-selected="false">Bascula</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-tv-tab"data-bs-toggle="pill"
+                      data-bs-target="#pills-tv" type="button" role="tab" aria-controls="pills-tv"
+                      aria-selected="false">Smart tv</button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-anydesk" data-bs-toggle="pill" 
+                    data-bs-target="#pills-anydesk" type="button" role="tab" aria-controls="pills-anydesk"
+                    aria-selected="false">Anydesk</button>
                 </li>
             </ul>
         </div>
@@ -275,6 +286,18 @@ class CheckComputadora
                     <?php require ('pages/bascula.php'); ?>
                 </div>
                 <!--Bascula-->
+
+                <!--Smart tv-->
+                <div class="tab-pane fade" id="pills-basculas" role="tabpanel" aria-labelledby="pills-tv-tab" tabindex="0">
+                    <?php require ('pages/smart.php'); ?>
+                </div>
+                <!--Smart tv-->
+
+                <!--Anydesk-->
+                <div class="tab-pane fade" id="pills-anydesk" role="tabpanel" aria-labelledby="pills-anydesk-tab" tabindex="0">
+                    <?php require ('pages/anydesk.php'); ?>
+                </div>
+                <!--Anydesk-->
 
              
                 <!--Tabs-->

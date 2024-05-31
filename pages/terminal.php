@@ -149,7 +149,7 @@ $ipTermterminals = array(
 </div>
 <!---------------Modal------------->
 
-<button type="button" class="btn btn-success" onclick="loadDoc()">Refrescar</button>
+<!-- <button type="button" class="btn btn-success" onclick="loadDoc()">Refrescar</button> -->
 <ul id="resultList" style="list-style:none;">
     <?php
     foreach ($ipTermterminals as $datos) {

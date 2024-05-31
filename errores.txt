@@ -58,3 +58,10 @@ Fecha y hora: 2024-05-28 21:59:01 IP: 192.168.67.1 Sucursal:  Mochicahui
 Fecha y hora: 2024-05-28 21:59:01 IP: 192.168.32.1 Sucursal:  Constancia
 Fecha y hora: 2024-05-29 17:40:19 IP: 192.168.23.1 Sucursal:  Higuera 
 Fecha y hora: 2024-05-29 17:43:32 IP: 192.168.116.1 Sucursal:  Rio Fuerte
+Fecha y hora: 2024-05-30 18:13:53 IP: 192.168.60.1 Sucursal:  Rosales
+Fecha y hora: 2024-05-30 18:13:54 IP: 192.168.29.1 Sucursal:  Laureles
+Fecha y hora: 2024-05-30 18:39:11 IP: 192.168.116.1 Sucursal:  Rio Fuerte
+Fecha y hora: 2024-05-30 21:45:19 IP: 192.168.19.1 Sucursal:  Mañanitas
+Fecha y hora: 2024-05-30 21:56:09 IP: 192.168.16.1 Sucursal:  Toledo
+Fecha y hora: 2024-05-31 01:55:13 IP: 192.168.12.1 Sucursal:  Zacatecas
+Fecha y hora: 2024-05-31 02:00:05 IP: 192.168.14.1 Sucursal:  Degollado
