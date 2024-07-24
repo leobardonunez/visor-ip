@@ -28,7 +28,7 @@ $ipTermterminals = array(
     ),
     4 => array(
         'sucursal' => 'Rio Fuerte',
-        'ip' => '192.168.116.156',
+        'ip' => '192.168.116.154',
         'ip2' => '192.168.116.157'
     ),
     5 => array(
@@ -71,12 +71,12 @@ $ipTermterminals = array(
         'sucursal' => 'Higuera de Zaragoza',
         'ip' => '192.168.20.89',
         'ip2' => '192.168.20.78',
-        'ip3' => '192.168.23.83'
+        'ip3' => '192.168.23.10'
     ),
     13 => array(
         'sucursal' => 'Pedro Anaya',
         'ip' => '192.168.51.77',
-        'ip2' => '192.168.51.70'
+        'ip2' => '192.168.51.75'
     ),
     14 => array(
         'sucursal' => 'Alamos',
@@ -116,7 +116,7 @@ $ipTermterminals = array(
     ),
     21 => array(
         'sucursal' => 'Gabriel Leyva Solano',
-        'ip' => '192.168.33.87',
+        'ip' => '192.168.33.74',
         'ip2' => '192.168.33.85',
         'ip3' => '192.168.33.83'
     ),

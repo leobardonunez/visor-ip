@@ -218,7 +218,7 @@ class CheckComputadora
                 </li>
 
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-anydesk" data-bs-toggle="pill" 
+                    <button class="nav-link" id="pills-anydesk-tab" data-bs-toggle="pill" 
                     data-bs-target="#pills-anydesk" type="button" role="tab" aria-controls="pills-anydesk"
                     aria-selected="false">Anydesk</button>
                 </li>

@@ -44,6 +44,11 @@ $ip_impresora = array(
         'Nombre' => 'Hp LaserJet M15w',
         'ip'=> '192.168.55.101'
     ),
+    7=> array(
+        'Area' => 'Oficina Supervisores Comercial',
+        'Nombre' => 'Hp LaserJet Pro 4003n',
+        'ip'=> '192.168.1.?'
+    ),
 
 );?>
 

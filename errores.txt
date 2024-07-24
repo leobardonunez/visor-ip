@@ -65,3 +65,60 @@ Fecha y hora: 2024-05-30 21:45:19 IP: 192.168.19.1 Sucursal:  Mañanitas
 Fecha y hora: 2024-05-30 21:56:09 IP: 192.168.16.1 Sucursal:  Toledo
 Fecha y hora: 2024-05-31 01:55:13 IP: 192.168.12.1 Sucursal:  Zacatecas
 Fecha y hora: 2024-05-31 02:00:05 IP: 192.168.14.1 Sucursal:  Degollado
+Fecha y hora: 2024-05-31 21:19:35 IP: 192.168.19.1 Sucursal:  Mañanitas
+Fecha y hora: 2024-06-01 00:09:16 IP: 192.168.19.1 Sucursal:  Mañanitas
+Fecha y hora: 2024-06-01 00:09:17 IP: 192.168.51.1 Sucursal:  Pedro Anaya
+Fecha y hora: 2024-06-01 20:37:44 IP: 192.168.67.1 Sucursal:  Mochicahui
+Fecha y hora: 2024-06-01 20:37:45 IP: 192.168.32.1 Sucursal:  Constancia
+Fecha y hora: 2024-06-01 20:38:38 IP: 192.168.21.1 Sucursal:  San Miguel
+Fecha y hora: 2024-06-01 20:50:59 IP: 192.168.21.1 Sucursal:  San Miguel
+Fecha y hora: 2024-06-04 00:31:22 IP: 192.168.21.1 Sucursal:  San Miguel
+Fecha y hora: 2024-06-04 00:31:41 IP: 192.168.21.1 Sucursal:  San Miguel
+Fecha y hora: 2024-06-04 02:15:06 IP: 192.168.21.1 Sucursal:  San Miguel
+Fecha y hora: 2024-06-04 21:56:05 IP: 192.168.20.1 Sucursal:  Ahome
+Fecha y hora: 2024-06-04 21:56:06 IP: 192.168.20.1 Sucursal:  Higuera 
+Fecha y hora: 2024-06-05 21:52:44 IP: 192.168.31.1 Sucursal:  Ejido Mexico
+Fecha y hora: 2024-06-06 02:01:43 IP: 192.168.25.1 Sucursal:  Alamos
+Fecha y hora: 2024-06-06 02:56:24 IP: 192.168.63.1 Sucursal:  Los Angeles
+Fecha y hora: 2024-06-07 03:05:30 IP: 192.168.33.1 Sucursal:  Gabriel Leyva Solano
+Fecha y hora: 2024-06-07 03:12:34 IP: 192.168.19.1 Sucursal:  Mañanitas
+Fecha y hora: 2024-06-07 03:12:35 IP: 192.168.33.1 Sucursal:  Gabriel Leyva Solano
+Fecha y hora: 2024-06-07 17:29:14 IP: 192.168.32.1 Sucursal:  Constancia
+Fecha y hora: 2024-06-07 17:29:30 IP: 192.168.16.1 Sucursal:  Toledo
+Fecha y hora: 2024-06-11 17:15:08 IP: 192.168.33.1 Sucursal:  Gabriel Leyva Solano
+Fecha y hora: 2024-06-11 17:23:19 IP: 192.168.33.1 Sucursal:  Gabriel Leyva Solano
+Fecha y hora: 2024-06-11 17:28:10 IP: 192.168.33.1 Sucursal:  Gabriel Leyva Solano
+Fecha y hora: 2024-06-11 19:53:56 IP: 192.168.29.1 Sucursal:  Laureles
+Fecha y hora: 2024-06-11 19:53:56 IP: 192.168.33.1 Sucursal:  Gabriel Leyva Solano
+Fecha y hora: 2024-06-11 20:06:24 IP: 192.168.20.1 Sucursal:  Higuera 
+Fecha y hora: 2024-06-11 20:06:25 IP: 192.168.31.1 Sucursal:  Ejido Mexico
+Fecha y hora: 2024-06-11 20:06:25 IP: 192.168.33.1 Sucursal:  Gabriel Leyva Solano
+Fecha y hora: 2024-06-11 21:52:12 IP: 192.168.30.1 Sucursal:  El Carrizo
+Fecha y hora: 2024-06-12 17:31:18 IP: 192.168.67.1 Sucursal:  Mochicahui
+Fecha y hora: 2024-06-12 17:31:19 IP: 192.168.32.1 Sucursal:  Constancia
+Fecha y hora: 2024-06-14 02:47:51 IP: 192.168.20.1 Sucursal:  Higuera 
+Fecha y hora: 2024-06-15 22:09:23 IP: 192.168.11.1 Sucursal:  Jiquilpan
+Fecha y hora: 2024-06-18 03:17:39 IP: 192.168.31.1 Sucursal:  Ejido Mexico
+Fecha y hora: 2024-06-18 17:04:18 IP: 192.168.20.1 Sucursal:  Higuera 
+Fecha y hora: 2024-06-22 03:04:44 IP: 192.168.19.1 Sucursal:  Mañanitas
+Fecha y hora: 2024-06-25 02:34:18 IP: 192.168.20.1 Sucursal:  Ahome
+Fecha y hora: 2024-06-27 02:29:03 IP: 192.168.33.1 Sucursal:  Gabriel Leyva Solano
+Fecha y hora: 2024-06-27 02:42:27 IP: 192.168.20.1 Sucursal:  Higuera 
+Fecha y hora: 2024-06-27 02:48:15 IP: 192.168.65.1 Sucursal:  Serdan
+Fecha y hora: 2024-06-27 18:53:50 IP: 192.168.20.1 Sucursal:  Higuera 
+Fecha y hora: 2024-06-29 03:16:17 IP: 192.168.20.1 Sucursal:  Ahome
+Fecha y hora: 2024-07-02 23:54:59 IP: 192.168.14.1 Sucursal:  Degollado
+Fecha y hora: 2024-07-03 00:58:31 IP: 192.168.65.1 Sucursal:  Serdan
+Fecha y hora: 2024-07-04 23:52:59 IP: 192.168.19.1 Sucursal:  Mañanitas
+Fecha y hora: 2024-07-06 03:12:14 IP: 192.168.25.1 Sucursal:  Alamos
+Fecha y hora: 2024-07-09 17:31:23 IP: 192.168.32.1 Sucursal:  Constancia
+Fecha y hora: 2024-07-09 18:10:34 IP: 192.168.21.1 Sucursal:  San Miguel
+Fecha y hora: 2024-07-10 18:10:18 IP: 192.168.16.1 Sucursal:  Toledo
+Fecha y hora: 2024-07-12 00:38:11 IP: 192.168.23.1 Sucursal:  Higuera 
+Fecha y hora: 2024-07-13 01:34:15 IP: 192.168.65.1 Sucursal:  Serdan
+Fecha y hora: 2024-07-13 17:41:25 IP: 192.168.20.1 Sucursal:  Ahome
+Fecha y hora: 2024-07-13 20:43:48 IP: 192.168.19.1 Sucursal:  Mañanitas
+Fecha y hora: 2024-07-16 00:35:41 IP: 192.168.23.1 Sucursal:  Higuera 
+Fecha y hora: 2024-07-19 01:17:02 IP: 192.168.29.1 Sucursal:  Laureles
+Fecha y hora: 2024-07-23 21:56:58 IP: 192.168.23.1 Sucursal:  Higuera 
+Fecha y hora: 2024-07-24 00:47:03 IP: 192.168.23.1 Sucursal:  Higuera 
