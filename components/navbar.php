@@ -11,7 +11,7 @@
           <a class="nav-link active" aria-current="page" href="index.php" style="color: white;">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/inventario.php" style="color: white;">Inventario</a>
+          <a class="nav-link" href="http://192.168.1.78:8080/sistemas" style="color: white;">Inventario</a>
         </li>        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">

@@ -26,7 +26,7 @@ $ipChecador = array(
     ),
     4 => array(
         'sucursal' => 'Serdan',
-        'ip' => '192.168.65.111',
+        'ip' => '192.168.65.102',
 
     ),
 
@@ -38,7 +38,7 @@ $ipChecador = array(
 
     6 => array(
         'sucursal' => 'Rio Fuerte',
-        'ip' => '192.168.116.153',
+        'ip' => '192.168.116.147',
 
     ),
     7 => array(
@@ -64,7 +64,7 @@ $ipChecador = array(
 
     11 => array(
         'sucursal' => 'Ahome',
-        'ip' => '192.168.20.98',
+        'ip' => '192.168.20.92',
 
     ),
 
@@ -81,7 +81,7 @@ $ipChecador = array(
     ),
     14 => array(
         'sucursal' => 'Higuera ',
-        'ip' => '192.168.23.201',
+        'ip' => '192.168.20.99',
 
     ),
     15 => array(
@@ -132,7 +132,7 @@ $ipChecador = array(
     ),
     23 => array(
         'sucursal' => 'Gabriel Leyva Solano',
-        'ip' => '192.168.33.78',
+        'ip' => '192.168.33.79',
 
     )
 

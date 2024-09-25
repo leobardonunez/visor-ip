@@ -38,7 +38,7 @@ $ipRed = array(
 
     6 => array(
         'sucursal' => 'Los Angeles',
-        'ip' => '192.168.63.1',
+        'ip' => '192.168.17.1',
 
     ),
     7 => array(

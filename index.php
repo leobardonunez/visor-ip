@@ -178,7 +178,7 @@ class CheckComputadora
         <div class="col"></div>
         <div class="col">
 
-            <h1>Sucursales</h1>
+            <h1 style="color: white;">Sucursales</h1>
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="pills-terminal-tab" data-bs-toggle="pill"
@@ -189,6 +189,11 @@ class CheckComputadora
                     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                         data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
                         aria-selected="false">Estado de la red</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-servidor-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-servidor" type="button" role="tab" aria-controls="pills-servidor"
+                        aria-selected="false">Servidores</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
@@ -228,10 +233,10 @@ class CheckComputadora
     </div>
 
     <div class="container">
-        <div class="input-group mb-3 search-container">
+        <!--<div class="input-group mb-3 search-container">
             <input type="text" class="form-control shadow-lg" placeholder="Buscar..." id="searchInput"
                 style="display: inline-block; margin-right: 10px;">
-        </div>
+        </div>-->
 
 
         <div class="row">
@@ -255,7 +260,12 @@ class CheckComputadora
                 <!--Red en sucursal-->
 
 
-
+           <!--Servidores-->
+           <div class="tab-pane fade" id="pills-servidor" role="tabpanel" aria-labelledby="pills-servidor-tab"
+                    tabindex="0">
+                    <?php require ('pages/servidores.php'); ?>
+                </div>
+                <!--Servidores-->
                 <!--Checadores-->
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
                     tabindex="0">
@@ -344,9 +354,9 @@ class CheckComputadora
 
 <script>
     (() => {
-        Se recarga cada 5 minutos o bien cada 300 segundos
+        //Se recarga cada 5 minutos o bien cada 300 segundos
         setInterval("location.reload()", 300000);
-        setInterval("location.reload()", 180000);
-        setInterval("location.reload()", 15000);
+        //setInterval("location.reload()", 180000);
+        //setInterval("location.reload()", 15000);
     })();
 </script>

@@ -38,18 +38,18 @@ $ipTermterminals = array(
     ),
     6 => array(
         'sucursal' => 'Los Angeles',
-        'ip' => '192.168.17.4',
+        'ip' => '192.168.117.108',
         'ip2' => '192.168.17.5'
     ),
     7 => array(
         'sucursal' => 'Jardines',
-        'ip' => '192.168.18.5',
+        'ip' => '192.168.18.189',
         'ip2' => '192.168.18.4'
     ),
     8 => array(
         'sucursal' => 'Mañanitas',
         'ip' => '192.168.19.4',
-        'ip2' => '192.168.19.5'
+        'ip2' => '192.168.19.67'
     ),
     9 => array(
         'sucursal' => 'Ahome',
@@ -64,7 +64,7 @@ $ipTermterminals = array(
     ),
     11 => array(
         'sucursal' => 'Rosales',
-        'ip' => '192.168.22.5',
+        'ip' => '192.168.22.51',
         'ip2' => '192.168.22.4'
     ),
     12 => array(
@@ -107,11 +107,12 @@ $ipTermterminals = array(
     19 => array(
         'sucursal' => 'Ejido Mexico',
         'ip' => '192.168.31.5',
+        'ip2'=> '192.168.31.71'
     ),
     20 => array(
         'sucursal' => 'Constancia',
         'ip' => '192.168.32.4',
-        'ip2' => '192.168.32.5',
+        'ip2' => '192.168.32.195',
         'ip3' => '192.168.32.6'
     ),
     21 => array(
